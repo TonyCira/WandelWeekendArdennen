@@ -613,7 +613,7 @@ window.WEEKENDS = [
         "voorgeschoten": 274.18,
         "aandeel": 188.98,
         "saldo": 85.2,
-        "voldaan": false,
+        "voldaan": true,
         "totaal": 517.74
       },
       {
@@ -623,7 +623,7 @@ window.WEEKENDS = [
         "voorgeschoten": 307.0,
         "aandeel": 188.98,
         "saldo": 118.02,
-        "voldaan": false,
+        "voldaan": true,
         "totaal": 517.74
       },
       {
@@ -633,7 +633,7 @@ window.WEEKENDS = [
         "voorgeschoten": 0.0,
         "aandeel": 188.98,
         "saldo": -188.98,
-        "voldaan": false,
+        "voldaan": true,
         "totaal": 517.74
       },
       {
