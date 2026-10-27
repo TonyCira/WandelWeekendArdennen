@@ -44,6 +44,13 @@ Nieuw jaar: kopie van Wandelweekend_Kosten_Template.xlsx → `JJJJ-MM-Plaats_Kos
 - Achtergrond: overzicht = assets/background-overzichtpagina.jpg; weekend = assets/<id>/page_picture.jpg indien aanwezig, anders logo
 - Design: donkergroen #1f4d3a, veel wit, afgeronde kaders, hover lichtgroen #dcefd6
 
+## Statistiekenpagina (stats.html + stats.js)
+- Bereikbaar via knop "Meer statistieken" onder de grafiek op de overzichtspagina
+- Kerncijfers, aftellen naar volgend weekend, kosten over de jaren (Chart.js, gestapeld per categorie, schakelaar Totaal / Per persoon per nacht, tabelweergave), records, aanwezigheid (ranking + matrix), persoonlijk overzicht (kies naam), kaart (Leaflet + OpenStreetMap, logo als pin), weer per weekend (Open-Meteo, live opgehaald)
+- Categoriekleuren (gevalideerd): Huisje #1d7a4e, Eten #eda100, Drank #2a78d6, Activiteit #eb6834, Vervoer #6250d6, Andere #e87ba4
+- `data/plaatsen.js` (handmatig): coördinaten per locatie (nieuwe plaats → regel toevoegen) + VOLGEND_WEEKEND (start/eind/plaats/voorlopig) voor het aftellen; nu voorlopig 22–25/10/2027
+- Externe bibliotheken via cdnjs: Chart.js 4.4.1 (chart.umd.js), Leaflet 1.9.4
+
 ## Excel-structuur
 - Info: Weekend-ID, naam, data, locatie, huisje, link, aantal personen*, totaal kosten*, waarvan vooraf betaald*, afrekening afgerond*, opmerkingen (* = automatisch)
 - Deelnemers: naam, aantal nachten (mag decimaal)

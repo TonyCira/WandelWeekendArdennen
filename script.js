@@ -15,6 +15,13 @@ function periode(w) {
   return new Date(+j, +m - 1, 1).toLocaleDateString("nl-BE", { month: "long", year: "numeric" });
 }
 
+// Status per deelnemer: groen label als voldaan, oranje zolang het saldo openstaat
+const deelnemerStatus = d => d.voldaan
+  ? '<span class="label label-ok">✓ Voldaan</span>'
+  : Math.abs(d.saldo) < 0.005
+    ? '<span class="label label-ok">In orde</span>'
+    : `<span class="label label-open">Open · ${d.saldo > 0 ? "krijgt terug" : "moet betalen"}</span>`;
+
 const statusLabel = w => w.afgerond
   ? '<span class="label label-ok">Afgerekend ✓</span>'
   : '<span class="label label-open">Afrekening loopt</span>';
@@ -160,7 +167,7 @@ function toonKosten(w) {
       <td class="getal">${nachten(d.nachten)}</td>
       <td class="getal">${euro.format(d.totaal)}</td>
       <td class="getal ${d.saldo > 0.005 ? "plus" : d.saldo < -0.005 ? "min" : ""}">${euro.format(d.saldo)}</td>
-      <td>${d.voldaan ? "✓ voldaan" : d.saldo > 0.005 ? "krijgt terug" : d.saldo < -0.005 ? "moet betalen" : "in orde"}</td>
+      <td>${deelnemerStatus(d)}</td>
     </tr>
     <tr class="detail-rij" id="detail-${i}" hidden><td colspan="5">${persoonDetail(w, d)}</td></tr>`).join("");
 
@@ -178,7 +185,8 @@ function toonKosten(w) {
     <div class="melding ${w.afgerond ? "melding-ok" : ""}">
       ${w.afgerond
         ? "<p><strong>Dit weekend is volledig afgerekend ✓</strong></p>"
-        : `<p>Gelieve op volgende rekening <strong class="rekening">${REKENING}</strong> jullie openstaande saldo te betalen.</p>
+        : `<p class="voldaan-teller"><strong>${w.deelnemers.filter(d => d.voldaan).length} van ${w.deelnemers.length}</strong> deelnemers zijn voldaan.</p>
+           <p>Gelieve op volgende rekening <strong class="rekening">${REKENING}</strong> jullie openstaande saldo te betalen.</p>
            <p>De personen die terug krijgen zullen daags hun saldo zien verschijnen op hun bankrekening.</p>`}
       ${lijst.length ? '<button class="knop" id="toon-transfers" aria-expanded="false">Toon wie betaalt aan wie</button>' : ""}
     </div>
@@ -252,6 +260,7 @@ function persoonDetail(w, d) {
         <dt>Totale kost weekend</dt><dd>${euro.format(d.totaal)}</dd>
         <dt>Voorgeschoten</dt><dd>${euro.format(d.voorgeschoten)}</dd>
         <dt>Saldo</dt><dd class="${d.saldo > 0.005 ? "plus" : d.saldo < -0.005 ? "min" : ""}">${euro.format(d.saldo)}</dd>
+        <dt>Status</dt><dd>${deelnemerStatus(d)}</dd>
       </dl>
       ${betaald.length ? `<p><strong>Voorgeschoten voor:</strong> ${betaald.map(k => `${esc(k.omschrijving)} (${euro.format(k.bedrag)})`).join(", ")}</p>` : ""}
     </div>`;

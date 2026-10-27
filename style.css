@@ -354,3 +354,8 @@ a.record:hover { background: var(--groen-licht); border-color: var(--groen-donke
   .teller strong { font-size: 1.5rem; }
   #kaart-ardennen { height: 340px; }
 }
+
+/* Status per deelnemer */
+.tabel-deelnemers .label { white-space: nowrap; }
+.voldaan-teller { font-size: 1.05rem; }
+@media (max-width: 560px) { .tabel-deelnemers .label { white-space: normal; } }
