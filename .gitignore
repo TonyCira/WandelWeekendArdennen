@@ -1,0 +1,7 @@
+# Excel-bestanden blijven lokaal (back-up), niet in de publieke repo
+excel/
+~$*.xlsx
+
+# Werkbestanden van Claude en Python
+Claude outputs/
+__pycache__/

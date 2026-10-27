@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekend — Wandelweekends Ardennen</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="kop">
+    <a href="index.html"><img class="kop-logo" src="assets/logo.svg" alt="Logo Wandelweekends Ardennen"></a>
+    <h1 id="titel">Weekend</h1>
+    <p id="subtitel"></p>
+    <p style="margin-top:1rem"><a class="knop" href="index.html">← Terug naar overzicht</a></p>
+  </header>
+
+  <main id="weekend-detail">
+    <section class="kaart">
+      <h2>Het huisje</h2>
+      <dl class="info" id="info"></dl>
+      <p style="margin-top:1rem"><a class="knop" id="link-huisje" target="_blank" rel="noopener">Bekijk het huisje ↗</a></p>
+    </section>
+
+    <!-- script.js vult deze sectie met het kostenoverzicht -->
+    <section class="kaart" id="kosten"></section>
+
+    <!-- script.js vult deze sectie met de fotogalerij -->
+    <section class="kaart" id="sfeer"></section>
+  </main>
+
+  <footer>Wandelweekends Ardennen</footer>
+
+  <script src="data/weekends.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

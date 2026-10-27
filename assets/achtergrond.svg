@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="lucht" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8f1ea"/><stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#lucht)"/>
+  <!-- verre bergen -->
+  <path d="M0 520 L140 400 L260 470 L420 330 L560 450 L700 360 L860 470 L1010 340 L1160 450 L1300 370 L1450 460 L1600 390 L1600 900 L0 900Z" fill="#9fb8a6"/>
+  <!-- middelste heuvels -->
+  <path d="M0 600 C200 520 340 560 480 540 C640 515 760 590 920 560 C1080 530 1220 500 1380 550 C1480 580 1550 560 1600 545 L1600 900 L0 900Z" fill="#6f9a7c"/>
+  <!-- bomen op de heuvel -->
+  <g fill="#3f6b50">
+    <path d="M120 560 l18 -50 l18 50z"/><path d="M150 556 l14 -40 l14 40z"/><path d="M175 552 l16 -46 l16 46z"/>
+    <path d="M1300 545 l18 -50 l18 50z"/><path d="M1330 548 l14 -40 l14 40z"/><path d="M1355 552 l16 -44 l16 44z"/>
+    <path d="M1460 562 l16 -46 l16 46z"/><path d="M1490 560 l14 -38 l14 38z"/>
+  </g>
+  <!-- dorpje -->
+  <g transform="translate(640 500)">
+    <rect x="0" y="40" width="46" height="34" fill="#f4efe6"/><path d="M-4 42 L23 18 L50 42Z" fill="#7a4b3a"/>
+    <rect x="54" y="48" width="40" height="28" fill="#efe8dc"/><path d="M50 50 L74 30 L98 50Z" fill="#5e3d31"/>
+    <rect x="104" y="10" width="20" height="66" fill="#f4efe6"/><path d="M100 12 L114 -30 L128 12Z" fill="#4a5a63"/>
+    <rect x="132" y="44" width="50" height="32" fill="#efe8dc"/><path d="M128 46 L157 22 L186 46Z" fill="#7a4b3a"/>
+    <rect x="192" y="52" width="38" height="24" fill="#f4efe6"/><path d="M188 54 L211 36 L234 54Z" fill="#5e3d31"/>
+    <g fill="#c9d3cf"><rect x="10" y="52" width="8" height="8"/><rect x="28" y="52" width="8" height="8"/><rect x="66" y="58" width="7" height="7"/><rect x="146" y="56" width="8" height="8"/><rect x="164" y="56" width="8" height="8"/><rect x="110" y="30" width="8" height="10"/></g>
+  </g>
+  <!-- voorgrond -->
+  <path d="M0 700 C260 640 520 690 780 660 C1040 630 1300 680 1600 640 L1600 900 L0 900Z" fill="#2f5d45"/>
+  <g fill="#1f4d3a">
+    <path d="M60 700 l26 -80 l26 80z"/><path d="M100 696 l20 -62 l20 62z"/><path d="M1460 660 l26 -84 l26 84z"/><path d="M1500 664 l20 -60 l20 60z"/>
+  </g>
+  <!-- wandelpad -->
+  <path d="M700 900 C760 820 820 760 900 700 C940 672 980 664 1020 660" stroke="#dfe7d9" stroke-width="10" fill="none" stroke-linecap="round" opacity=".8"/>
+</svg>

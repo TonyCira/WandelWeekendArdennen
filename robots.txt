@@ -1,0 +1,3 @@
+# Niet indexeren door zoekmachines
+User-agent: *
+Disallow: /
