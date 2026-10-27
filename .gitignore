@@ -5,3 +5,6 @@ excel/
 # Werkbestanden van Claude en Python
 Claude outputs/
 __pycache__/
+
+# Projectnotities blijven lokaal
+plan-website.md
