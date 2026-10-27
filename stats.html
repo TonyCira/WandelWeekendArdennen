@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Statistieken — Wandelweekends Ardennen</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+</head>
+<body class="met-logo">
+  <header class="kop">
+    <a href="index.html"><img class="kop-logo" src="assets/logo.svg" alt="Logo Wandelweekends Ardennen"></a>
+    <h1>Statistieken</h1>
+    <p>Al onze weekends samen, sinds 2022</p>
+    <p style="margin-top:1rem"><a class="knop" href="index.html">← Terug naar overzicht</a></p>
+  </header>
+
+  <main id="stats">
+    <!-- Kerncijfers -->
+    <section class="kaart">
+      <h2>In cijfers</h2>
+      <div class="tegels" id="kpi"></div>
+    </section>
+
+    <!-- Aftellen -->
+    <section class="kaart aftellen" id="aftellen"></section>
+
+    <!-- Kosten over de jaren -->
+    <section class="kaart">
+      <div class="kaart-kop">
+        <h2>Kosten over de jaren</h2>
+        <div class="schakelaar" id="kosten-modus" role="group" aria-label="Weergave kosten">
+          <button class="actief" data-modus="totaal">Totaal</button>
+          <button data-modus="ppn">Per persoon per nacht</button>
+        </div>
+      </div>
+      <p class="voetnoot">Klik op een categorie in de legende om ze aan of uit te zetten.</p>
+      <div class="grafiek-houder"><canvas id="grafiek-kosten"></canvas></div>
+      <details class="categorie" style="margin-top:1rem">
+        <summary><span>Toon als tabel</span></summary>
+        <div class="tabel-wrap" id="tabel-kosten"></div>
+      </details>
+    </section>
+
+    <!-- Records -->
+    <section class="kaart">
+      <h2>Records</h2>
+      <div class="records" id="records"></div>
+    </section>
+
+    <!-- Aanwezigheid -->
+    <section class="kaart">
+      <div class="kaart-kop">
+        <h2>Aanwezigheid</h2>
+        <div class="schakelaar" id="aanw-modus" role="group" aria-label="Weergave aanwezigheid">
+          <button class="actief" data-modus="nachten">Nachten</button>
+          <button data-modus="weekends">Weekends</button>
+        </div>
+      </div>
+      <div class="grafiek-houder grafiek-laag"><canvas id="grafiek-aanwezig"></canvas></div>
+      <h3>Wie was wanneer mee?</h3>
+      <div class="tabel-wrap" id="matrix"></div>
+    </section>
+
+    <!-- Persoonlijk overzicht -->
+    <section class="kaart">
+      <h2>Persoonlijk overzicht <small class="voetnoot">— kies een naam</small></h2>
+      <div class="namen" id="namen"></div>
+      <div id="persoon"></div>
+    </section>
+
+    <!-- Kaart -->
+    <section class="kaart">
+      <h2>Waar waren we?</h2>
+      <p class="voetnoot">Klik op een pin voor de weekends op die plaats.</p>
+      <div id="kaart-ardennen"></div>
+    </section>
+
+    <!-- Weer -->
+    <section class="kaart">
+      <h2>Het weer tijdens onze weekends</h2>
+      <p class="voetnoot">Gemeten weer per dag (bron: Open-Meteo).</p>
+      <div class="weer-lijst" id="weer"></div>
+    </section>
+  </main>
+
+  <footer>Wandelweekends Ardennen</footer>
+
+  <script src="data/weekends.js"></script>
+  <script src="data/plaatsen.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script src="stats.js"></script>
+</body>
+</html>
