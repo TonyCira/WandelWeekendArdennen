@@ -582,7 +582,7 @@ window.WEEKENDS = [
     "linkHuisje": "https://www.ardennes-etape.be/vakantiehuizen-ardennen/Saint-Hubert/Luxe-villa-Sauna-106917-01/?stay=Weekend-0_8-20270108",
     "linkOpmerking": "",
     "opmerkingen": "",
-    "afgerond": false,
+    "afgerond": true,
     "totaal": 2933.86,
     "vooraf": 1863.0,
     "deelnemers": [
@@ -593,7 +593,7 @@ window.WEEKENDS = [
         "voorgeschoten": 489.68,
         "aandeel": 188.98,
         "saldo": 300.7,
-        "voldaan": false,
+        "voldaan": true,
         "totaal": 517.74
       },
       {
@@ -603,7 +603,7 @@ window.WEEKENDS = [
         "voorgeschoten": 0.0,
         "aandeel": 125.98,
         "saldo": -125.98,
-        "voldaan": false,
+        "voldaan": true,
         "totaal": 345.16
       },
       {
@@ -643,7 +643,7 @@ window.WEEKENDS = [
         "voorgeschoten": 0.0,
         "aandeel": 188.98,
         "saldo": -188.98,
-        "voldaan": false,
+        "voldaan": true,
         "totaal": 517.74
       }
     ],
